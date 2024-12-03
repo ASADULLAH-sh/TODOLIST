@@ -1,0 +1,143 @@
+/* General Body and Font Styles */
+body {
+  background: #020631;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container {
+  padding-top: 75px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Input and Form Styles */
+#todoInput {
+  padding: 10px;
+  width: 80%;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  color: #fff;
+  background: #4b96f0;
+  padding: 10px 20px;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+button:hover {
+  background-color: #452579;
+}
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Todo List Styles */
+#todoList {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+#todoList li {
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  word-break: break-word;
+}
+
+#todoList li.done {
+  background: #d3ffd3;
+  text-decoration: line-through;
+}
+
+#todoList li button {
+  font-size: 14px;
+  padding: 8px 16px;
+  margin-left: 10px;
+  background: #4b96f0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+#todoList li button:hover {
+  background-color: #452579;
+}
+
+/* Edit and Save Button Styles */
+#todoList li .edit-input {
+  display: none;
+  margin-top: 10px;
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Delete Button Styles */
+#todoList li button.delete-btn {
+  background-color: #e96575;
+}
+
+#todoList li button.delete-btn:hover {
+  background-color: #d45264;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding-top: 50px;
+    width: 90%;
+  }
+
+  #todoInput {
+    width: 70%;
+  }
+
+  #todoList li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #todoList li button {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .edit-input {
+    width: 100%;
+  }
+}
